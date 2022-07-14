@@ -1,0 +1,20 @@
+#!/bin/sh -e
+dir=$(cd "$(dirname "$0")" && pwd)
+config_dir="$HOME/.config" && mkdir -p "$config_dir"
+local_dir="$HOME/.local" && mkdir -p "$local_dir"
+
+echo 'tmux'
+ln -fs "$dir/tmux/tmux.conf" "$HOME/.tmux.conf"
+
+echo 'git'
+ln -Fs "$dir/git" "$config_dir/"
+
+printf 'neovim '
+rm -rf "$local_dir"/state/nvim "$local_dir"/share/nvim
+ln -Fs "$dir/nvim" "$config_dir/"
+nvim --headless -u NONE \
+	-c 'lua require("_.bootstrap").setup()' 2>&1 |
+	sed -e "s/Paq: /\n/g" |
+	sed -e "s/^.*Installed //;s/^$//"
+nvim --headless -c 'TSUpdate' -c 'q'
+echo "shellcheck, shfmt, and stylua are require for neovim"

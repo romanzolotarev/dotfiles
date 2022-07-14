@@ -1,0 +1,14 @@
+#!/bin/zsh -e
+dir=$(cd "$(dirname "$0")" && pwd)
+config_dir="$HOME/.config"
+local_dir="$HOME/.local"
+
+echo 'tmux'
+rm -f "$HOME/.tmux.conf"
+
+echo 'git'
+rm -rf "$config_dir/git"
+
+echo 'neovim'
+rm -rf "$local_dir"/{share,state}/nvim
+rm -rf "$config_dir"/nvim

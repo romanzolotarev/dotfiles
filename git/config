@@ -1,0 +1,14 @@
+[user]
+	name = roman zolotarev
+	email = hi@romanzolotarev.com
+[github]
+	user = romanzolotarev
+[push]
+	default = simple
+	autoSetupRemote = true
+[pull]
+	rebase = true
+[core]
+	whitespace = trailing-space,-space-before-tab,cr-at-eol
+[init]
+	defaultBranch = main
