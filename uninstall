@@ -1,5 +1,4 @@
-#!/bin/zsh -e
-dir=$(cd "$(dirname "$0")" && pwd)
+#!/bin/sh -e
 config_dir="$HOME/.config"
 local_dir="$HOME/.local"
 
@@ -10,5 +9,7 @@ echo 'git'
 rm -rf "$config_dir/git"
 
 echo 'neovim'
-rm -rf "$local_dir"/{share,state}/nvim
-rm -rf "$config_dir"/nvim
+rm -rf "$local_dir"/share/nvim "$local_dir"/state/nvim "$config_dir"/nvim
+
+echo 'editorconfig'
+rm -f "$HOME/.editorconfig"
