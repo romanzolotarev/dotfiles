@@ -26,6 +26,5 @@
   "telescope.nvim": { "branch": "master", "commit": "18774ec7929c8a8003a91e9e1f69f6c32258bbfe" },
   "unimpaired.nvim": { "branch": "main", "commit": "792404dc39a754ef17c4aca964762fa7cb880baa" },
   "vim-lastplace": { "branch": "master", "commit": "bb3191b134ade9d1f01014e17c3df91e8911dd5c" },
-  "vim-nightfly-guicolors": { "branch": "master", "commit": "06ad2689ebd251a71c6caeb9fb47e231773c9b47" },
-  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
+  "vim-nightfly-guicolors": { "branch": "master", "commit": "06ad2689ebd251a71c6caeb9fb47e231773c9b47" }
 }

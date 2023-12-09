@@ -4,7 +4,6 @@ return {
 	config = function()
 		local gs = require("gitsigns")
 		gs.setup({
-			word_diff = true,
 			on_attach = function()
 				local k = require("_.lib.k")
 				k("n", "]c", function()
